@@ -1,0 +1,169 @@
+/* ----------------------------------------------- */
+/* HEADER */
+/* ----------------------------------------------- */
+header {
+  background-image: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url(../img/hero.jpg);
+
+  background-size: cover;
+  background-position: center;
+  height: 100vh;
+  background-attachment: fixed;
+}
+
+.hero-text-box {
+  position: absolute;
+  width: 114rem;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+
+  @media only screen and (max-width: $big-tablets) {
+    width: 100%;
+    padding: 0 2%;
+  }
+
+  @media only screen and (max-height: 400px) {
+    top: 60%;
+  }
+}
+
+
+
+.main-nav{
+  display: flex;
+  align-items: center;
+  padding-top: 2rem;
+
+  .logo {
+    height: 15rem;
+    width: auto;
+
+    @media only screen and (max-width: $small-tablets) {
+      height: 7rem;
+    }
+
+  }
+
+  .logo-black {
+    display: none;
+    height: 7rem;
+    width: auto;
+    margin: 5px 0;
+  }
+
+  &__list{
+    margin-left: auto;
+    list-style: none;
+
+    @media only screen and (max-width: $small-tablets) {
+      display: none;
+      margin:0 0 0 1rem;
+    }
+
+    & li{
+      display: inline-block;
+      margin-left: 4rem;
+
+      @media only screen and (max-width: $small-tablets) {
+        display: block;
+      }
+    }
+
+    & li a:link,
+    & li a:visited {
+      padding: .8rem 0;
+      color: #fff;
+      text-decoration: none;
+      text-transform: uppercase;
+      font-size: 1.8rem;
+      border-bottom: 2px solid transparent;
+      transition: border-bottom 0.2s;
+
+      @media only screen and (max-width: $small-tablets) {
+        border: 0;
+        padding: 0;
+        font-size: 1.6rem;
+
+      }
+    }
+
+    & li a:hover,
+    & li a:active {
+      border-bottom: 2px solid $color-primary;
+
+      @media only screen and (max-width: $small-tablets) {
+        border: 0;
+      }
+    }
+  }
+}
+
+
+/* Sticky navi */
+.sticky {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  background-color: rgba(255, 255, 255, 0.98);
+  box-shadow: 0 2px 2px #efefef;
+  z-index: 9999;
+
+}
+
+.sticky .main-nav{
+  padding-top: 0;
+}
+
+.sticky .main-nav__list li{
+  margin: 1rem 0 1rem 5.5rem;
+}
+
+.sticky .main-nav__list li a:link,
+.sticky .main-nav__list li a:visited{
+  color: $color-grey-dark-2;
+}
+
+.sticky .logo { display: none; }
+.sticky .logo-black {
+  display: block;
+  align-self: start;
+}
+
+/* Mobile navi */
+.mobile-nav-icon {
+  margin-top: 3rem;
+  cursor: pointer;
+  display: none;
+
+  @media only screen and (max-width: $small-tablets) {
+    display: inline-block;
+  }
+}
+
+.mobile-nav-icon svg {
+  position: absolute;
+  top: 3%;
+  right: 3%;
+  height: 6rem;
+  width: 6rem;
+  fill: #fff;
+
+  @media only screen and (max-width: 350px) {
+    height: 4rem;
+    width: 4rem;
+  }
+
+  .sticky &{
+    fill: $color-grey-dark-2;
+  }
+}
+
+.menu-icon-close{
+  display: none;
+}
+
+
+
+
+

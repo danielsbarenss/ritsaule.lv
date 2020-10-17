@@ -1,0 +1,84 @@
+.musu-kontakti{
+  background-color: $color-grey-light-1;
+
+  &__container{
+    display: flex;
+    @media only screen and (max-width: $small-tablets) {
+      flex-direction: column;
+    }
+  }
+
+  &__text{
+    flex: 0 0 40%;
+
+    @media only screen and (max-width: $small-tablets) {
+      flex: 0;
+      margin-bottom: 6rem;
+    }
+
+    &__long{
+      margin-bottom: 3rem;
+    }
+
+    &__content{
+      font-weight: 400;
+      @media only screen and (max-width: $small-tablets) {
+        margin-left: 5%;
+      }
+    }
+  }
+  &__info{
+    @media only screen and (max-width: $small-tablets) {
+      display: flex;
+      align-items: center;
+    }
+  }
+}
+
+.ceo-figure{
+  position: relative;
+  width: 55%;
+}
+.ceo-img{
+  border-radius: 30%;
+  width: 100%;
+}
+
+.ceo-caption{
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, 20%);
+  color: #fff;
+  text-transform: uppercase;
+  font-size: 1.2rem;
+  //font-weight: 400;
+  text-align: center;
+  opacity: 0;
+  transition: all .5s;
+  backface-visibility: hidden;
+  width: 80%;
+}
+
+.ceo-figure:hover .ceo-caption{
+  opacity: 1;
+  transform: translate(-50%, -50%);
+}
+
+.ceo-figure:hover .ceo-img{
+  filter: blur(1px) brightness(60%);
+}
+
+.street{
+  padding: 0;
+  height: 50rem;
+  display: flex;
+
+  @media only screen and (max-width: $small-tablets) {
+    flex-direction: column;
+  }
+}
+.google__maps{
+  flex: 1;
+}
+

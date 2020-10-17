@@ -1,0 +1,43 @@
+/* ----------------------------------------------- */
+/* FOOTER */
+/* ----------------------------------------------- */
+
+footer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: #333;
+  padding: 5rem;
+  font-size: 1.6rem;
+}
+
+.footer-nav {
+  list-style: none;
+  margin-bottom: 2rem;
+
+}
+
+.footer-nav li{
+  display: inline-block;
+}
+
+.footer-nav li:not(:last-child){
+  margin-right: 2rem;
+}
+
+.footer-nav li a:link,
+.footer-nav li a:visited{
+  text-decoration: none;
+  border: 0;
+  color: #888;
+  transition: color 0.2s;
+}
+
+.footer-nav li a:hover,
+.footer-nav li a:active {
+  color: #ddd;
+}
+
+footer p {
+  color: #888;
+}

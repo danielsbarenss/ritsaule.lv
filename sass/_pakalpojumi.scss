@@ -1,0 +1,49 @@
+.pakalpojums{
+  display: flex;
+  justify-content: space-between;
+  margin-top: 2.5rem;
+  @media only screen and (max-width: $small-tablets) {
+    flex-direction: column;
+  }
+
+  &__title{
+    flex: 1;
+  }
+
+  &__points{
+    flex: 0 0 70%;
+  }
+
+  &__point{
+    display: flex;
+    align-items: start;
+    margin-bottom: 1.5rem;
+
+
+    &__icon{
+      fill: $color-primary;
+      height: 1rem;
+      width: 1rem;
+      margin:1rem 1rem 0 0;
+    }
+
+    &__text{
+      flex: 1;
+
+      & a{
+        text-decoration: none;
+        color: $color-primary;
+        border-bottom: 1px solid $color-primary;
+      }
+    }
+  }
+}
+
+.pakalpojums:not(:last-child){
+  border-bottom: solid 1px $color-primary;
+  padding-bottom: 2.5rem;
+}
+
+.pakalpojums:first-child{
+  margin-top: 5rem;
+}

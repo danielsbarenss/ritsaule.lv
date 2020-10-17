@@ -1,0 +1,177 @@
+/* ----------------------------------------------- */
+/* REUSABLE COMPONENTS */
+/* ----------------------------------------------- */
+.row {
+  max-width: 114rem;
+  margin: 0 auto;
+
+  @media only screen and (max-width: $big-tablets) {
+    padding: 0 2%;
+  }
+
+  @media only screen and (max-width: $small-tablets) {
+    padding: 0 4%;
+  }
+}
+
+section {
+  padding: 8rem 0;
+
+  @media only screen and (max-width: $medium-tablets){
+    padding: 6rem 0;
+  }
+}
+
+.box {
+  padding: 1%;
+}
+
+
+/* ----- BUTTONS ----- */
+
+.btn:link,
+.btn:visited{
+  font-size: 2rem;
+  display: inline-block;
+  padding: 1rem 3rem;
+  font-weight: 300;
+  text-decoration: none;
+  border-radius: 200px;
+  transition: background-color 0.2s, border 0.2s, color 0.2s;
+}
+
+.btn-full-top{
+  @media only screen and (max-width: $small-tablets) {
+    margin-bottom: 4%;
+  }
+}
+.btn-full:link,
+.btn-full:visited, {
+  background-color: $color-primary;
+  border: 1px solid $color-primary;
+  color: #fff;
+  margin-right: 1.5rem;
+}
+
+.btn-ghost:link,
+.btn-ghost:visited {
+  border: 1px solid $color-primary;
+  color: $color-primary;
+}
+
+.btn:hover,
+.btn:active, {
+  background-color: $color-primary-dark;
+}
+
+.btn-full:hover,
+.btn-full:active {
+  border: 1px solid $color-primary-dark;
+}
+
+.btn-ghost:hover,
+.btn-ghost:active {
+  border: 1px solid $color-primary-dark;
+  color: #fff;
+}
+
+
+/* ----------------------------------------------- */
+/* FORM */
+/* ----------------------------------------------- */
+
+.contact-form {
+  flex: 0 0 50%;
+  margin-left: auto;
+
+  @media only screen and (max-width: $small-tablets) {
+    flex: 0;
+    width: 100%;
+  }
+
+  &__row:not(:last-child) {
+    margin-bottom: 2rem;
+  }
+
+  &__row:last-child {
+    display: flex;
+    align-items: center;
+  }
+
+
+
+  &__row label {
+    font-size: 1.2rem;
+    font-weight: 400;
+    display: inline-block;
+  }
+}
+
+input,
+textarea,
+select{
+  font-size: 1.5rem;
+  font-family: inherit;
+  color: inherit;
+  width: 100%;
+  padding: 7px;
+  border-radius: 3px;
+  border: none;
+  box-shadow: 0 .1rem .3rem rgba(0, 0, 0, .1);
+}
+
+input{
+  border: none;
+  border-bottom: 3px solid transparent;
+
+  &:focus {
+    outline: none;
+    box-shadow: 0 1rem 2rem rgba(0, 0, 0, .1);
+    border-bottom: 3px solid $color-primary;
+  }
+
+  &:focus:invalid {
+    border-bottom: 3px solid $color-primary-dark;
+  }
+}
+
+textarea {
+  height: 10rem;
+  &:focus {
+    outline: none;
+    box-shadow: 0 1rem 2rem rgba(0, 0, 0, .1);
+    border-bottom: 3px solid $color-primary;
+  }
+}
+
+.submit-button{
+  background-color: $color-primary;
+  color: #fff;
+  font-size: 2rem;
+  flex: 0;
+  padding: 1rem 3rem;
+  font-weight: 300;
+  text-decoration: none;
+  border-radius: 200px;
+  border: 1px solid $color-primary;
+  transition: background-color 0.2s, border 0.2s;
+};
+
+.submit-button:hover{
+  background-color: $color-primary-dark;
+  border: 1px solid $color-primary-dark;
+}
+
+.form-message{
+  margin-left: 10%;
+}
+
+.success{
+  border-bottom: 3px solid $color-primary;
+}
+
+.error{
+  border-bottom: 3px solid #f62626;
+}
+
+*:focus {outline: none;}
