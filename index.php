@@ -1,3 +1,5 @@
+<?php require 'sendemail.php'; ?>
+
 <!DOCTYPE html>
 <html lang="en">
     <head>
@@ -234,7 +236,7 @@
 
         <section class="musu-kontakti js--section-musu-kontakti" id="musu-kontakti">
             <div class="row" id="form">
-                <h2>Ar preiku gaidīsim no Tevis ziņu</h2>
+                <h2>Ar prieku gaidīsim no Tevis ziņu</h2>
             </div>
             <div class="musu-kontakti__container row">
                 <div class="musu-kontakti__text">
@@ -256,7 +258,7 @@
 
                 </div>
 
-                <form method="post" action="mailer-new.php" class="contact-form">
+                <form method="post" action="" class="contact-form">
                     <div class="contact-form__row">
                         <label for="name">Vārds</label>
                         <input type="text" name="name" id="name" placeholder="Tavs vārds" required>
@@ -280,17 +282,21 @@
                     </div>
                     <div class="contact-form__row">
                         <label>&nbsp</label>
-                        <input type="submit" value="Nosūtīt!" class="submit-button">
+                        <input type="submit" name="submit" value="Nosūtīt!" class="submit-button">
 
+                        <!--alert messages start-->
                         <?php
-                        if($_GET['success'] == 1){
-                            echo "<div class=\"form-message success\"><p>Ziņa tika nosūtīta!</p></div>";
-                        }
+                            if (isset($_GET['success'])) {
+                                if($_GET['success'] == 1){
+                                    echo '<div class="form-message success"><p>Ziņa tika nosūtīta!</p></div>';
+                                }
 
-                        if($_GET['success'] == -1){
-                            echo "<div class=\"form-message error\"><p>Kaut kas nogāja greizi! Mēģini vēlreiz.</p></div>";
-                        }?>
-
+                                if($_GET['success'] == -1){
+                                    echo '<div class="form-message error"><p>Kaut kas nogāja greizi! Mēģini vēlreiz.</p></div>';
+                                }
+                            }
+                        ?>
+                        <!--alert messages end-->
                     </div>
                 </form>
             </div>
@@ -302,6 +308,12 @@
             <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2154.686990072228!2d25.27657273120541!3d57.3132029692297!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x46ebe1857955cd71%3A0xde26ad1d74b67f27!2zUmF1bmFzIGllbGEgMTMsIEPEk3NpcywgQ8STc3UgcGlsc8STdGEsIExWLTQxMDE!5e0!3m2!1slv!2slv!4v1602693260344!5m2!1slv!2slv" width="100%" height="100%" frameborder="0" style="border:0;" allowfullscreen="" aria-hidden="false" tabindex="0"></iframe>
         </div>
     </section>
+        <script type="text/javascript">
+            if(window.history.replaceState){
+                window.history.replaceState(null, null, window.location.href);
+            }
+        </script>
+
 
     </body>
     <footer>
