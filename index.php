@@ -237,27 +237,10 @@
         <section class="musu-kontakti js--section-musu-kontakti" id="musu-kontakti">
             <div class="row" id="form">
                 <h2>Ar prieku gaidīsim no Tevis ziņu</h2>
+                <p class="musu-kontakti__text">Lai sazinātos ar mums varat nosūtīt mums e-pastu vai piezvanīt,
+                    lai sarunātu tikšanos. Mūsu vispārējais atbildes laiks ir viena darba diena.</p>
             </div>
             <div class="musu-kontakti__container row">
-                <div class="musu-kontakti__text">
-                    <p class="musu-kontakti__text__long">
-                        Lai sazinātos ar mums varat nosūtīt mums e-pastu vai piezvanīt, lai sarunātu tikšanos. Mūsu vispārējais atbildes laiks ir viena darba diena.
-                    </p>
-                    <div class="musu-kontakti__info">
-                        <figure class="ceo-figure">
-                            <img src="img/rit-saule-ceo.jpg" alt="katrina-aa" class="ceo-img">
-                            <figcaption class="ceo-caption">Valdes locekle<br> Katrīna Alksne-Alksnīte</figcaption>
-                        </figure>
-
-                        <p class="musu-kontakti__text__content">
-                            (+371) 26475683<br>
-                            katrina@ritsaule.lv<br>
-                            Raunas iela 13, Cēsis, Cēsu novads, LV-4101
-                        </p>
-                    </div>
-
-                </div>
-
                 <form method="post" action="" class="contact-form">
                     <div class="contact-form__row">
                         <label for="name">Vārds</label>
@@ -301,18 +284,6 @@
                 </form>
             </div>
         </section>
-    
-    <section class="street">
-
-        <div class="google__maps">
-            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2154.686990072228!2d25.27657273120541!3d57.3132029692297!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x46ebe1857955cd71%3A0xde26ad1d74b67f27!2zUmF1bmFzIGllbGEgMTMsIEPEk3NpcywgQ8STc3UgcGlsc8STdGEsIExWLTQxMDE!5e0!3m2!1slv!2slv!4v1602693260344!5m2!1slv!2slv" width="100%" height="100%" frameborder="0" style="border:0;" allowfullscreen="" aria-hidden="false" tabindex="0"></iframe>
-        </div>
-    </section>
-        <script type="text/javascript">
-            if(window.history.replaceState){
-                window.history.replaceState(null, null, window.location.href);
-            }
-        </script>
 
 
     </body>
@@ -320,6 +291,8 @@
         <div class="">
             <ul class="footer-nav">
                 <li><a href="https://www.facebook.com/katrina.alksnealksnite">Facebook</a></li>
+                <li><a>(+371) 26475683</a></li>
+                <li><a>katrina@ritsaule.lv</a></li>
             </ul>
         </div>
         <p>

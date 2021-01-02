@@ -37,9 +37,8 @@ if(isset($_POST['submit'])){
                         <p>Ziņa:<br> $message</p>";
 
         $mail->send();
-        header("Location: http://localhost/ritsaule?success=1#form");
+        header("Location: http://www.ritsaule.lv?success=1#form");
     } catch (Exception $e){
-        header("Location: http://localhost/ritsaule?success=-1#form");
+        header("Location: http://www.ritsaule.lv?success=-1#form");
     }
 }
-?>
